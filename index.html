@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Event Tracker</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="Logo.png" type="image/png">
+</head>
+
+<body class="min-h-screen bg-gradient-to-tr from-slate-300 via-blue-300 to-indigo-400 bg-fixed ">
+
+    <header
+        class="text-4xl font-bold top-0 z-50 w-full bg-white/60 backdrop-blur-md border-b border-white/40 rounded-2xl shadow-sm text-slate-600 flex flex-row justify-center"
+        id="top">
+        <p class="bg-gradient-to-r from-red-600 to-slate-800 bg-clip-text text-transparent">Astro Event Tracker</p>
+    </header>
+
+    <nav id="navbar"
+        class="bg-slate-800 rounded-2xl text-yellow-500 sticky top-0 z-30 flex md:justify-between flex-col md:flex-row min-h-10 items-center">
+        <div class="logo mx-auto md:mx-0">
+            <img class="border-white border-solid border-5px" src="Logo.png" alt="Logo" width="30px" height="30px">
+        </div>
+        <ul class="flex space-x-5 justify-center md:justify-normal">
+            <li class="hover:bg-gray-700"><a href="/">Home</a></li>
+            <li class="hover:bg-gray-700"><a href="#section1">Supermoons</a></li>
+            <li class="hover:bg-gray-700"><a href="#section2">Eclipses</a></li>
+            <li class="hover:bg-gray-700"><a href="#section3">Meteor-Showers</a></li>
+            <li class="hover:bg-gray-700"><a href="#top">Go to Top</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <section id="section1">
+            <div class=" py-20 px-4">
+                <div class="max-w-6xl mx-auto">
+
+                    <div class="mb-10 px-4">
+                        <h2 class="text-3xl font-bold text-slate-800">Supermoons in 2026</h2>
+                        <p class="text-slate-500">Bigger, brighter moon.</p>
+                    </div>
+
+                    <div class="relative group">
+
+                        <button
+                            id="scrollLeftButton1"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl border border-slate-200 opacity-0 group-hover:opacity-100 transition-all hidden md:flex hover:bg-white hover:scale-110 active:scale-95"
+                            aria-label="Scroll Left">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <div id="card-container1"
+                            class="mask-fade-edges flex overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-p-10 gap-8 p-10">
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="supermoon img/wolf-moon.jpg" alt="wolf-moon">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-blue-600 uppercase tracking-widest">Saturday,
+                                            January 3 </span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Wolf Moon</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Wolf Moon is the traditional
+                                            name for the first full moon of the calendar year, which typically occurs in
+                                            January.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="supermoon img/beaver-moon.jpg" alt="beaver-moon">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Tuesday,
+                                            November 24</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Beaver Moon</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Beaver Moon is the
+                                            traditional name for the full moon that occurs in November, marking the time
+                                            when beavers are actively preparing their lodges for winter.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full  rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="supermoon img/cold-moon.jpg" alt="cold-moon">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-orange-600 uppercase tracking-widest">Wednesday,
+                                            December 23</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Cold Moon</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Cold Moon is the traditional
+                                            name for the December full moon, which signifies the arrival of winter's
+                                            deep freeze and the year's longest nights.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <button
+                            id="scrollRightButton1"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl border border-slate-200 opacity-0 group-hover:opacity-100 transition-all hidden md:flex hover:bg-white hover:scale-110 active:scale-95"
+                            aria-label="Scroll Right">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="section2">
+            <div class=" py-20 px-4">
+                <div class="max-w-6xl mx-auto">
+
+                    <div class="mb-10 px-4">
+                        <h2 class="text-3xl font-bold text-slate-800">Eclipses in 2026</h2>
+                        <p class="text-slate-500">Celestial alignment shadow event & temporary obscuring of light. </p>
+                    </div>
+
+                    <div class="relative group">
+
+                        <button
+                            id="scrollLeftButton2"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl border border-slate-200 opacity-0 group-hover:opacity-100 transition-all hidden md:flex hover:bg-white hover:scale-110 active:scale-95"
+                            aria-label="Scroll Left">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <div id="card-container2"
+                            class="mask-fade-edges flex overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-p-10 gap-8 p-10">
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full  rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="eclipse img/annular-solar-eclipse.jpg" alt="annular-solar-eclipse">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-indigo-600 uppercase tracking-widest">February
+                                            17</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Annular Solar Eclipse</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">An annular solar eclipse, or
+                                            "ring of fire" eclipse, happens when the Moon passes between the Sun and
+                                            Earth, but is too far away to completely block the Sun, leaving a bright,
+                                            fiery ring of sunlight visible around the Moon's silhouette. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="eclipse img/total-lunar-eclipse.jpg" alt="total-lunar-eclipse">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">March
+                                            2-3</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Total Lunar Eclipse</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">A total lunar eclipse is when
+                                            Earth perfectly aligns between the Sun and Moon, completely blocking direct
+                                            sunlight and casting the Moon into Earth's dark shadow (umbra), often
+                                            turning it a stunning red or orange hue as sunlight bends through our
+                                            atmosphere.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full  rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="eclipse img/total-solar-eclipse.jpg" alt="total-solar-eclipse">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">August
+                                            12</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Total Solar Eclipse</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">A total solar eclipse is when the
+                                            Moon perfectly aligns between the Sun and Earth, completely blocking the
+                                            Sun's bright face and casting a temporary, eerie darkness over a small area,
+                                            allowing the Sun's faint outer atmosphere (corona) to become visible.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="eclipse img/partial-lunar-eclipse.jpg" alt="partial-lunar-eclipse">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">August
+                                            27-28</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Partial Lunar Eclipse</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">A partial lunar eclipse occurs
+                                            when the Earth passes between the Sun and Moon, but not in perfect
+                                            alignment, so only a portion of the Moon enters Earth's dark shadow (umbra),
+                                            creating a dark, curved bite on the lunar surface while the rest remains lit
+                                            by the Sun.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button
+                            id="scrollRightButton2"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl border border-slate-200 opacity-0 group-hover:opacity-100 transition-all hidden md:flex hover:bg-white hover:scale-110 active:scale-95"
+                            aria-label="Scroll Right">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="section3">
+            <div class="py-20 px-4">
+                <div class="max-w-6xl mx-auto">
+
+                    <div class="mb-10 px-4">
+                        <h2 class="text-3xl font-bold text-slate-800">Meteor Showers in 2026</h2>
+                        <p class="text-slate-500">Nightly shooting stars.</p>
+                    </div>
+
+                    <div class="relative group">
+
+                        <button
+                            id="scrollLeftButton3"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl border border-slate-200 opacity-0 group-hover:opacity-100 transition-all hidden md:flex hover:bg-white hover:scale-110 active:scale-95"
+                            aria-label="Scroll Left">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <div id="card-container3"
+                            class="mask-fade-edges flex overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-p-10 gap-8 p-10">
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/quadrantid.jpg" alt="quadrantid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-indigo-600 uppercase tracking-widest">January
+                                            2-3</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Quadrantid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">Quadrantids are known for their
+                                            short, intense peak. They are best seen in the Northern Hemisphere.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/lyrid.jpg" alt="lyrid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">April
+                                            21-22</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Lyrid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Lyrids are usually a moderate
+                                            meteor shower, best viewed from the Northern Hemisphere.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/eta aquariid.jpg" alt="eta-aquariid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">May
+                                            5-6</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Eta Aquariid Meteor Shower
+                                        </h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Eta Aquariids are best seen
+                                            from the Southern Hemisphere and can be prolific, producing fast and bright
+                                            meteors.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/southern delta aquariid.jpg"
+                                            alt="southern-delta-aquariid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">July
+                                            30-31</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Southern Delta Aquariid
+                                            Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Southern Delta Aquariids,
+                                            associated with comet 96P/Machholz, can be seen from the Southern
+                                            Hemisphere. Their fast, faint meteors radiate from the constellation
+                                            Aquarius.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/alpha capricornid.jpg"
+                                            alt="alpha-capricornid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">July
+                                            30-31</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Alpha Capricornid Meteor
+                                            Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Alpha Capricornids meteor
+                                            shower produces a relatively small number of meteors but is notable for its
+                                            bright, slow-moving fireballs. They can be seen in the Northern and Southern
+                                            hemispheres.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/perseid.jpg" alt="perseid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-emerald-600 uppercase tracking-widest">August
+                                            12-13</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Perseid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Perseids are one of the most
+                                            popular meteor showers of the year, offering a good show for viewers in the
+                                            Northern Hemisphere. They are known for their bright meteors.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/orionid.jpg" alt="orionid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-orange-600 uppercase tracking-widest">October
+                                            21-22</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Orionid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Orionids are best viewed from
+                                            the Northern Hemisphere and are known for their fast-moving meteors
+                                            associated with Halley's Comet.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/taurid.jpg" alt="taurid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-slate-600 uppercase tracking-widest">November
+                                            4-5</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Taurid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Taurids are known for their
+                                            long duration and relatively low meteor rate. They are visible in the
+                                            Southern and Northern hemispheres.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/leonid.jpg" alt="leonid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-indigo-600 uppercase tracking-widest">November
+                                            17</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Leonid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Leonids have produced some of
+                                            the most impressive meteor storms in history. While such storms are
+                                            infrequent, the Leonids are worth watching and can be seen in both
+                                            hemispheres.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/geminid.jpg" alt="geminid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-emerald-600 uppercase tracking-widest">December
+                                            13-14</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Geminid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed"> The Geminids are one of the most
+                                            reliable and active meteor showers of the year, producing a high number of
+                                            bright meteors. The Geminid meteor shower is most prominent in the Northern
+                                            Hemisphere, but it can also be seen in the Southern Hemisphere.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
+                                <div
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                                    <div
+                                        class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
+                                        <img class="rounded-2xl w-full h-full object-cover"
+                                            src="meteor shower img/ursid.jpg" alt="ursid-meteor-shower">
+                                    </div>
+                                    <div class="px-4 pb-6">
+                                        <span
+                                            class="text-xs font-bold text-orange-600 uppercase tracking-widest">December
+                                            22</span>
+                                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Ursid Meteor Shower</h3>
+                                        <p class="text-slate-500 mt-2 leading-relaxed">The Ursids are associated with
+                                            the comet 8P/Tuttle and the shower's radiant point appears to originate from
+                                            the constellation Ursa Minor (the Little Dipper). The Ursid meteor shower is
+                                            visible in the Northern Hemisphere.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button
+                           id="scrollRightButton3"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl border border-slate-200 opacity-0 group-hover:opacity-100 transition-all hidden md:flex hover:bg-white hover:scale-110 active:scale-95"
+                            aria-label="Scroll Right">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center font-bold">
+        <p>About | Privacy Policy</p>
+        <p>&copy;2025 link-here. All rights reserved.</p>
+    </footer>
+    <script src="navbar.js"></script>
+    <script src="scroll_buttons.js"></script>
+</body>
+
+</html>
