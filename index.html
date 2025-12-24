@@ -7,6 +7,7 @@
     <title>Astro Event Tracker</title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="icon" href="Logo.png" type="image/png">
+    <link rel="stylesheet" href="dropdown.css">
 </head>
 
 <body class="min-h-screen bg-gradient-to-tr from-slate-300 via-blue-300 to-indigo-400 bg-fixed ">
@@ -18,15 +19,20 @@
     </header>
 
     <nav id="navbar"
-        class="bg-slate-800 rounded-2xl text-yellow-500 sticky top-0 z-30 flex md:justify-between flex-col md:flex-row min-h-10 items-center">
+        class="bg-slate-800 navbar rounded-2xl text-yellow-500 sticky top-0 z-30 flex md:justify-between flex-col md:flex-row min-h-10 items-center">
         <div class="logo mx-auto md:mx-0">
             <img class="border-white border-solid border-5px" src="Logo.png" alt="Logo" width="30px" height="30px">
         </div>
-        <ul class="flex space-x-5 justify-center md:justify-normal">
-            <li class="hover:bg-gray-700"><a href="/">Home</a></li>
-            <li class="hover:bg-gray-700"><a href="#section1">Supermoons</a></li>
-            <li class="hover:bg-gray-700"><a href="#section2">Eclipses</a></li>
-            <li class="hover:bg-gray-700"><a href="#section3">Meteor-Showers</a></li>
+        <ul id="item-group" class="flex space-x-5 justify-center md:justify-normal">
+            <li class="hover:bg-gray-700"><a href="https://ash-astro269.github.io/ash-astro-repo/">Home</a></li>
+            <div class="dropdown relative inline-block">
+            <a href="#" id="navDropdown" class="cursor-pointer dropbtn">Astro Events ▼</a>
+            <div id="dropdownContent" class="dropdown-content min-w-3 hidden absolute bg-[#f9f9f9] shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] z-31">
+                 <a class="text-black py-2 px-6 block hover:bg-[#ff69b4]" href="#section1">Supermoons</a></li>
+                 <a class="text-black py-2 px-6 block hover:bg-[#ff69b4]" href="#section2">Eclipses</a></li>
+                 <a class="text-black py-2 px-2.5 block hover:bg-[#ff69b4]" href="#section3">Meteor-Showers</a></li>
+            </div>
+            </div>
             <li class="hover:bg-gray-700"><a href="#top">Go to Top</a></li>
         </ul>
     </nav>
@@ -496,20 +502,20 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer">
-                                <div
-                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2">
+                            <div class="flex-shrink-0 w-[80vw] md:w-80 lg:w-96 snap-center group/card cursor-pointer [perspective:1000px] " onclick="flipCard(this)">
+                                <div id="card-inner"
+                                    class="relative h-full rounded-3xl bg-white/10 backdrop-blur-lg p-2 shadow-sm border border-slate-200 transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:-translate-y-2 ">
                                     <div
                                         class="h-48 w-full rounded-2xl mb-6 flex items-center justify-center text-5xl transition-transform duration-500 group-hover/card:scale-[1.02]">
                                         <img class="rounded-2xl w-full h-full object-cover"
                                             src="meteor shower img/ursid.jpg" alt="ursid-meteor-shower">
                                     </div>
-                                    <div class="px-4 pb-6">
+                                    <div px-4 pb-6">
                                         <span
                                             class="text-xs font-bold text-orange-600 uppercase tracking-widest">December
                                             22</span>
                                         <h3 class="text-2xl font-bold text-slate-900 mt-1">Ursid Meteor Shower</h3>
-                                        <p class="text-slate-500 mt-2 leading-relaxed">The Ursids are associated with
+                                         <p class="text-slate-500 mt-2 leading-relaxed">The Ursids are associated with
                                             the comet 8P/Tuttle and the shower's radiant point appears to originate from
                                             the constellation Ursa Minor (the Little Dipper). The Ursid meteor shower is
                                             visible in the Northern Hemisphere.</p>
@@ -543,6 +549,7 @@
     </footer>
     <script src="navbar.js"></script>
     <script src="scroll_buttons.js"></script>
+   
 </body>
 
 </html>

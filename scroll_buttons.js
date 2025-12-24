@@ -1,4 +1,3 @@
-// Function to handle the scroll left action
 function scrollLeftContainer1() {
     const container1 = document.getElementById('card-container1');
     if (container1) {
@@ -57,7 +56,9 @@ document.getElementById('scrollLeftButton3').addEventListener('click', scrollLef
 
 
 
-// Function to handle the scroll right action
+
+
+
 function scrollRightContainer1() {
     const container1 = document.getElementById('card-container1');
     if (container1) {
