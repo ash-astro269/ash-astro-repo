@@ -16,16 +16,28 @@
             <div class="logo mx-auto md:mx-0">
                 <img class="border-white border-solid border-5px" src="Logo.png" alt="Logo" width="30px" height="30px">
             </div>
-            <ul id="item-group" class="flex space-x-5 justify-center md:justify-normal">
+            <ul class="flex space-x-5 justify-center md:justify-normal">
                 <li class="hover:bg-green-500"><a href="index.html">Home</a></li>
                 <li class="hover:bg-green-500"><a href="main_page.html">Go to Main Page</a></li>
+                <li class="hover:bg-green-500"><a id="fileLink" href="#">Contact Us</a></li>
             </ul>
         </nav>
-        <img  class= "hidden" src="bg_image.png" alt="background-image">
-        <footer class="text-center mt-auto font-bold bg-yellow-300">
+        <main class="flex flex-col justify-center items-center min-h-screen">
+            <img class="mx-auto w-1600 md:w-2400 lg:w-3200 h-1600 md:h-2400 lg:h-3200 " src="Logo.png" alt="logo" height="1000" width="800">
+        </main>
+        <footer id="hiddenFile" class="text-center hidden fixed bottom-0 font-bold bg-yellow-300">
             <p>Contact:+91 977xxxxx93</p>
             <p>Email:xavashkumar@gmail.com</p>
         </footer>
     </div>
+    <script>
+        const link = document.getElementById('fileLink');
+        const file = document.getElementById('hiddenFile');
+
+        link.addEventListener('click', function(event){
+            event.preventDefault();
+            file.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
